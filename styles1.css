@@ -1,0 +1,161 @@
+/* styles.css */
+
+/* Tạo nền trang web đẹp mắt */
+body {
+    background-color: #f4f7fa;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Căn giữa toàn bộ nội dung */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card có shadow để nổi bật */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Tên tiêu đề với hiệu ứng */
+h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Cải thiện nút bấm */
+button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Nút "Add Input" và "Spin" với màu sắc và hiệu ứng hover */
+#addInput {
+    background-color: #007bff;
+    color: white;
+}
+
+#addInput:hover {
+    background-color: #0056b3;
+}
+
+#spin {
+    background-color: #28a745;
+    color: white;
+}
+
+#spin:hover {
+    background-color: #218838;
+}
+
+/* Canvas spinner trông sắc nét hơn */
+.spinner-container {
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+}
+
+#spinnerCanvas {
+    border-radius: 10px;
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Kết quả hiển thị giữa trang */
+#result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 20px;
+}
+
+/* Thêm kiểu dáng cho các ô input */
+.input-group {
+    margin-bottom: 15px; /* Tăng khoảng cách giữa các input */
+}
+
+.input-group input {
+    margin-top: 10px;
+    border-radius: 10px; /* Bo góc cho input */
+    padding: 10px; /* Thêm không gian trong input */
+    font-size: 1.2rem; /* Cỡ chữ dễ đọc */
+    border: 2px solid #ccc; /* Đường viền sáng */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển đổi cho border và box-shadow */
+}
+
+/* Tạo hiệu ứng hover và focus cho ô input */
+.input-group input:focus {
+    outline: none; /* Xóa viền mặc định */
+    border-color: #007bff; /* Màu viền khi focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Hiệu ứng đổ bóng khi focus */
+}
+
+/* Thêm kiểu cho nút Remove */
+.input-group .removeInput {
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: #dc3545; /* Màu đỏ */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng chuyển màu và biến dạng */
+}
+
+/* Nút Remove thay đổi khi hover */
+.input-group .removeInput:hover {
+    background-color: #c82333; /* Màu đỏ đậm khi hover */
+    transform: scale(1.05); /* Phóng to một chút khi hover */
+}
+
+/* Cải thiện khoảng cách và kiểu dáng cho các input-group */
+.input-group .removeInput:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.5); /* Hiệu ứng đổ bóng khi focus vào nút Remove */
+}
+
+/* Hiệu ứng cho các ô input khi không có giá trị */
+.input-group input::placeholder {
+    color: #6c757d; /* Màu placeholder sáng và dễ nhìn */
+}
+
+/* Đặt màu sắc mặc định cho các input khi chưa được nhập */
+.input-group input:disabled {
+    background-color: #f8f9fa; /* Nền nhạt khi disabled */
+    border-color: #ddd; /* Viền nhạt */
+}
+
+/* Đặt kích thước cho spinner canvas để phù hợp với màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    #spinnerCanvas {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    #result {
+        font-size: 1.2rem;
+    }
+}
