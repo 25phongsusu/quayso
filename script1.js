@@ -64,7 +64,7 @@ $(document).ready(function () {
         const anglePerSegment = 2 * Math.PI / total;
         
         // Loại bỏ ô cuối cùng
-        const validIndices = Array.from({ length: total - 1 }, (_, i) => i);
+        const validIndices = Array.from({ length: total - 2 }, (_, i) => i);
         const targetIndex = validIndices[Math.floor(Math.random() * validIndices.length)];
         
         const targetAngle = targetIndex * anglePerSegment;
